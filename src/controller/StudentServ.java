@@ -43,8 +43,7 @@ public class StudentServ extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		request.setAttribute("students",  students);
 		request.getRequestDispatcher("ViewStudent.jsp").forward(request, response);
 	}
@@ -61,9 +60,10 @@ public class StudentServ extends HttpServlet {
 		Student student = new Student();
 		student.setAge(age);
 		student.setName(name);
+		students.add(student);
 		
 		request.setAttribute("students", students);
-		request.getRequestDispatcher("ViewStudent.jps").forward(request, response);
+		request.getRequestDispatcher("ViewStudent.jsp").forward(request, response);
 		
 		
 		

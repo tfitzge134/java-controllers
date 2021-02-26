@@ -18,6 +18,14 @@
 
 
 </table>
+<hr/>
+<h4> Use the form below to  add a new student</h4>
+<form method = "post">
+Name: <input type = "text"  name = "name" />
+Age: <input type = "number" name = "age" />
+<input type = "submit" value = "Add Student" />
+
+</form>
 
 </body>
 </html>
